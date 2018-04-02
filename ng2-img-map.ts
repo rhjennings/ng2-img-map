@@ -4,30 +4,7 @@ import {
 
 @Component({
   selector: 'img-map',
-  styles: [
-    '.img-map { position: relative; }',
-    '.img-map canvas, .img-map img { position: absolute; top: 0; left: 0; }',
-    '.img-map img { display: block; height: auto; max-width: 100%; }'
-  ],
-  template: `
-    <div
-      class="img-map"
-      #container
-      (window:resize)="onResize($event)"
-    >
-      <img
-        #image
-        [src]="src"
-        (load)="onLoad($event)"
-      >
-      <canvas
-        #canvas
-        (click)="onClick($event)"
-        (mousemove)="onMousemove($event)"
-        (mouseout)="onMouseout($event)"
-      ></canvas>
-    </div>
-  `
+  templateUrl: './ng2-img-map.html' 
 })
 export class ImgMapComponent {
 
